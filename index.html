@@ -1,44 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Justie is Sigma</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Klimaatverandering - Red de Aarde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#10B981',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1E3A8A, #10B981);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .parallax {
+            background-image: url('https://sm.mashable.com/t/mashable_in/photo/default/shutterstock-324590741_br82.1248.jpg');
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .glow {
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        }
+        .image-input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            border: 2px solid #F59E0B;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        });
+
+        function changeImage(event) {
+            const img = document.getElementById("climate-image");
+            img.src = event.target.value;
+        }
+    </script>
 </head>
 <body>
-
-    <div class="intro">
-        <h1 class="title">why justie is sigma</h1>
-        <p class="subtitle">justie is sigma</p>
-    </div>
-
-    <section class="content">
-        <div class="card">
-            <h2>justie is sigma</h2>
-            <p>justie is sigma</p>
-        </div>
-
-        <div class="card">
-            <h2>justie is sigma</h2>
-            <p>justie is sigma</p>
-        </div>
-
-        <div class="card">
-            <h2>justie is sigma</h2>
-            <p>justie is sigma</p>
-        </div>
-
-        <div class="card">
-            <h2>justie is sigma</h2>
-            <p>justie is sigma</p>
-        </div>
+    <header class="bg-primary text-white py-6 text-center shadow-lg">
+        <h1 class="text-5xl font-bold glow">klimaatverandering</h1>
+        <p class="text-xl">Gemaakt door nio</p>
+    </header>
+    
+    <div class="parallax">klimaatverandering</div>
+    
+    <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
+        <h2 class="text-3xl font-semibold text-accent">gevolgen van klimaatverandering</h2>
+        <p class="mt-4">de temperatuur stijgt waardoor ijs op de polen smelt en de zeespiegel stijgt dit zorgt ervoor dat sommige gebieden onder water kunnen komen te staan</p>
+        <p class="mt-4">er zijn steeds vaker extreme weersomstandigheden zoals hittegolven overstromingen en orkanen hierdoor kunnen oogsten mislukken en ontstaat er voedseltekort</p>
+        <p class="mt-4">dieren verliezen hun leefgebied omdat bossen verdwijnen en oceanen warmer worden wat leidt tot het uitsterven van veel soorten</p>
+        <p class="mt-4">sommige delen van de wereld worden droger waardoor woestijnen uitbreiden en mensen geen toegang meer hebben tot schoon drinkwater</p>
+        <p class="mt-4">ijskappen smelten waardoor oude virussen en bacteriën kunnen vrijkomen die gevaarlijk kunnen zijn voor mens en dier</p>
+        <p class="mt-4">door de stijgende temperaturen wordt het moeilijker om buiten te werken wat een enorme impact heeft op de economie en levensomstandigheden</p>
+        
+        
+        
+        <img id="climate-image" src="https://th.bing.com/th/id/R.72223e873765617747609c648e1b5d71?rik=DQKMEI8jhDekLw&riu=http%3a%2f%2fpsc.apl.washington.edu%2fBEST%2fPSW2007%2fbearours3.jpg&ehk=tBnKST2v4%2fYiN2Sat5j%2fqdFj02wNbQTFNX0YVHTbmbY%3d&risl=&pid=ImgRaw&r=0" alt="klimaatgevolgen" class="mt-4 w-full rounded-lg shadow-md">
     </section>
-
-    <footer>
-        <button onclick="goToNextSection()">Discover More</button>
+    
+    <footer class="bg-secondary text-white text-center py-6 mt-10 shadow-lg">
+        <p class="text-lg">&copy; 2025 klimaatbewust | gemaakt door nio 👍</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
