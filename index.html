@@ -35,7 +35,7 @@
             transform: translateY(0);
         }
         .parallax {
-            background-image: url('https://th.bing.com/th/id/OIP.lfYYcRdJeq0anZfs6sDbqwHaE8?rs=1&pid=ImgDetMain');
+            background-image: url('https://th.bing.com/th/id/R.8511d2abf6e7c55a23dcaa2a92744391?rik=A3ZWnBW61VDYQA&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1086953%2fimages%2fo-ANTARCTICA-SUMMER-ICE-MELT-facebook.jpg&ehk=cmGCw34I4OaPEB23MBQB6YmaYIhkr9chFjLMrlbQoWI%3d&risl=&pid=ImgRaw&r=0');
             height: 400px;
             background-attachment: fixed;
             background-position: center;
@@ -73,37 +73,62 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("visible", "image-visible");
+                    } else {
+                        entry.target.classList.remove("visible", "image-visible");
                     }
                 });
             }, { threshold: 0.1 });
+
             sections.forEach(section => observer.observe(section));
         });
     </script>
 </head>
 <body>
     <header class="bg-primary text-white py-6 text-center shadow-lg">
-        <h1 class="text-5xl font-bold glow">Red de IJsberen</h1>
-        <p class="text-xl">Bescherm hun toekomst door klimaatverandering tegen te gaan</p>
-        <button onclick="window.location.href='quiz.html'" class="mt-4 bg-accent text-white px-4 py-2 rounded shadow-md hover:bg-yellow-600 transition-all">Doe de Quiz</button>
+        <h1 class="text-5xl font-bold glow">ijsberen en hoe ze in gevaar zijn door klimaat verandering.</h1>
+        <p class="text-xl">Gemaakt door nio.</p>
     </header>
     
     <div class="parallax">IJsberen in gevaar door klimaatverandering</div>
 
     <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
-        <h2 class="text-3xl font-semibold text-accent">Waarom zijn ijsberen in gevaar?</h2>
-        <p class="mt-4">IJsberen zijn afhankelijk van het zee-ijs om te jagen op hun favoriete prooi: zeehonden. Door klimaatverandering smelt het ijs echter in een alarmerend tempo. Dit betekent dat ijsberen steeds moeilijker voedsel kunnen vinden en langere afstanden moeten zwemmen, wat hun overlevingskansen verkleint.</p>
-        <p class="mt-4">Wetenschappers voorspellen dat als de opwarming van de aarde doorgaat, de populatie ijsberen tegen 2050 met tweederde kan afnemen. Het is daarom cruciaal om de uitstoot van broeikasgassen te verminderen en het Noordpoolgebied te beschermen.</p>
+        <h2 class="text-3xl font-semibold text-accent">Wat is klimaatverandering eigenlijk?</h2>
+        <p class="mt-4">Klimaatverandering is een mondiaal probleem waar we allemaal weleens over horen. Maar wat betekent het nou precies? Simpel gezegd: het klimaat op aarde verandert door toedoen van de mens. Sinds de industriële revolutie stoten we enorme hoeveelheden broeikasgassen uit, zoals CO₂, door het verbranden van olie, gas en kolen. Deze gassen houden warmte vast in de atmosfeer, waardoor de aarde opwarmt.</p>
+        <p class="mt-4">Het klinkt misschien abstract, maar de gevolgen zijn heel concreet. Denk aan smeltende ijskappen, stijgende zeespiegels en extreem weer. En dan hebben we het nog niet eens over de impact op dieren, zoals de ijsberen.</p>
     </section>
 
     <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
-        <h2 class="text-3xl font-semibold text-accent">Hoe beïnvloedt klimaatverandering ijsberen?</h2>
-        <p class="mt-4">Klimaatverandering veroorzaakt een snelle afname van het zee-ijs in het Noordpoolgebied. Dit heeft directe gevolgen voor ijsberen:</p>
+        <h2 class="text-3xl font-semibold text-accent">Waarom hebben ijsberen het zo moeilijk?</h2>
+        <p class="mt-4">IJsberen zijn de koningen van de Noordpool, maar hun koninkrijk brokkelt af. Letterlijk. Deze majestueuze dieren zijn volledig afhankelijk van zee-ijs om te overleven. Het ijs is hun jachtgebied, waar ze zeehonden vangen – hun belangrijkste voedselbron. Maar door klimaatverandering smelt het zee-ijs in rap tempo. En dat heeft grote gevolgen:</p>
         <ul class="mt-4 list-disc list-inside">
-            <li>Minder zee-ijs betekent minder jachtgebied voor ijsberen.</li>
-            <li>IJsberen moeten langere afstanden zwemmen, wat energie kost en gevaarlijk is.</li>
-            <li>Minder voedsel leidt tot verhongering en een lagere voortplantingssnelheid.</li>
+            <li><strong>Minder ijs, minder voedsel</strong>: Zonder zee-ijs kunnen ijsberen niet goed jagen. Ze moeten langere afstanden zwemmen, wat veel energie kost. Vooral jonge of zwakkere ijsberen overleven dit vaak niet.</li>
+            <li><strong>Verhongering</strong>: Als ijsberen niet genoeg zeehonden kunnen vangen, verhongeren ze. Dit heeft ook gevolgen voor de voortplanting. Vrouwtjes hebben een gezond gewicht nodig om zwanger te worden en jongen groot te brengen.</li>
+            <li><strong>Mens-dierconflicten</strong>: Wanhopige ijsberen komen steeds vaker in de buurt van menselijke nederzettingen op zoek naar voedsel. Dit is gevaarlijk voor zowel mensen als ijsberen.</li>
         </ul>
-        <p class="mt-4">Het is duidelijk dat klimaatverandering een directe bedreiging vormt voor het voortbestaan van ijsberen.</p>
+        <p class="mt-4">Het is een trieste realiteit: als we niets doen, zouden ijsberen tegen 2050 met tweederde kunnen zijn afgenomen.</p>
+    </section>
+
+    <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
+        <h2 class="text-3xl font-semibold text-accent">Wat gebeurt er met het Noordpoolgebied?</h2>
+        <p class="mt-4">Het Noordpoolgebied warmt twee keer zo snel op als de rest van de wereld. Dit heeft niet alleen gevolgen voor ijsberen, maar voor het hele ecosysteem:</p>
+        <ul class="mt-4 list-disc list-inside">
+            <li><strong>Smeltend ijs</strong>: Het zee-ijs verdwijnt in een alarmerend tempo. Dit heeft gevolgen voor dieren die afhankelijk zijn van het ijs, zoals zeehonden en walrussen.</li>
+            <li><strong>Veranderingen in de voedselketen</strong>: Als het zee-ijs verdwijnt, heeft dat een domino-effect op de hele voedselketen. Van plankton tot zeehonden en uiteindelijk ijsberen – iedereen wordt geraakt.</li>
+            <li><strong>Stijgende zeespiegel</strong>: Het smelten van het Arctische ijs draagt bij aan de stijging van de zeespiegel, wat wereldwijd gevolgen heeft voor kustgebieden.</li>
+        </ul>
+        <p class="mt-4">Het Noordpoolgebied is een kwetsbaar ecosysteem dat snel verandert. En als we niet ingrijpen, verliezen we niet alleen de ijsberen, maar ook een uniek stukje van onze planeet.</p>
+    </section>
+
+    <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
+        <h2 class="text-3xl font-semibold text-accent">Wat kunnen wij doen?</h2>
+        <p class="mt-4">Het goede nieuws is: we kunnen nog steeds iets doen! Hier zijn een paar manieren waarop jij kunt helpen om ijsberen en het Noordpoolgebied te beschermen:</p>
+        <ul class="mt-4 list-disc list-inside">
+            <li><strong>Verminder je ecologische voetafdruk</strong>: Kies voor duurzame energie, zoals zonne- of windenergie. En bespaar energie door bijvoorbeeld korter te douchen of de verwarming een graadje lager te zetten.</li>
+            <li><strong>Steun organisaties</strong>: Er zijn veel organisaties die zich inzetten voor de bescherming van ijsberen en hun leefgebied. Door hen te steunen, maak je een direct verschil.</li>
+            <li><strong>Verspreid bewustwording</strong>: Deel dit verhaal met vrienden en familie. Hoe meer mensen weten over de gevolgen van klimaatverandering, hoe groter de kans dat we samen iets kunnen veranderen.</li>
+            <li><strong>Minder plastic</strong>: Plasticvervuiling is een groot probleem voor de oceanen. Door minder plastic te gebruiken, help je niet alleen ijsberen, maar ook alle andere zeedieren.</li>
+        </ul>
+        <p class="mt-4">Elke kleine actie telt. Samen kunnen we ervoor zorgen dat ijsberen niet alleen overleven, maar ook gedijen in hun natuurlijke leefomgeving.</p>
     </section>
 
     <section class="max-w-4xl mx-auto mt-10 p-6 content-box fade-in">
@@ -113,9 +138,13 @@
                 <img src="https://www.wyniasweek.nl/wp-content/uploads/2020/08/polarbearsmain.jpg" alt="IJsbeer 1" class="rounded-lg shadow-lg">
             </div>
             <div class="image-fade-in">
-                <img src="https://th.bing.com/th/id/OIP.SGQm3L9NzIO647Taa76OCAHaE8?rs=1&pid=ImgDetMain" alt="IJsbeer 2" class="rounded-lg shadow-lg">
+                <img src="https://www.ttelegraf.ru/wp-content/uploads/2022/06/medvedi-arktika-stok-1024x683.jpg" alt="IJsbeer 2" class="rounded-lg shadow-lg">
             </div>
         </div>
     </section>
+
+    <footer class="bg-primary text-white py-6 text-center mt-10">
+        <p> Gemaakt door nio.</p>
+    </footer>
 </body>
 </html>
